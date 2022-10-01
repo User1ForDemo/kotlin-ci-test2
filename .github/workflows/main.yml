@@ -19,7 +19,8 @@ jobs:
   build:
     # The type of runner that the job will run on
     # 
-    runs-on: self-hosted
+#    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -31,6 +32,7 @@ jobs:
           java-version: '17'
           cache: 'gradle'
       - name: Setup Gradle
-        uses: testorg/gradle-build-action@v2
-      - name: Run build with Gradle Wrapper
-        run: ./gradlew build
+#        uses: testorg/gradle-build-action@v2
+        uses: gradle/gradle-build-action@v2
+      - name: Run test with Gradle Wrapper
+        run: ./gradlew test
