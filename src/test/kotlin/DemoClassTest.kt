@@ -19,6 +19,15 @@ class DemoClassTest {
         } catch (e: Exception) {
         }
 
+        for (i in 0..15) {
+            try {
+                Thread.sleep(60 * 1000L)
+                println("sleep: $i")
+            } catch (e: InterruptedException) {
+                e.printStackTrace()
+            }
+        }
+
         assertTrue(false)
     }
 }
