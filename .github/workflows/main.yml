@@ -32,7 +32,7 @@ jobs:
           java-version: '17'
           cache: 'gradle'
       - name: Setup Gradle
-#        uses: testorg/gradle-build-action@v2
-        uses: gradle/gradle-build-action@v2
+        uses: testorg/gradle-build-action@v2
+#        uses: gradle/gradle-build-action@v2
       - name: Run test with Gradle Wrapper
         run: ./gradlew test
