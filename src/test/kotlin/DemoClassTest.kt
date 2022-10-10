@@ -18,5 +18,7 @@ class DemoClassTest {
 
         } catch (e: Exception) {
         }
+
+        assertTrue(false)
     }
 }
