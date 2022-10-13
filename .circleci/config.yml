@@ -1,14 +1,27 @@
+#version: 2.1
+#workflows:
+#  testing:
+#    jobs:
+#      - runner-test
+#jobs:
+#  runner-test:
+#    machine: true
+#    resource_class: promeg/linux
+#    steps:
+#      - checkout
+#      - run: echo "Hi I'm on Runners!"
+#      - run: ls
+#      - run: ./gradlew test
 version: 2.1
-workflows:
-  testing:
-    jobs:
-      - runner-test
+orbs:
+  python: circleci/python@2.0.3
+
 jobs:
-  runner-test:
-    machine: true
-    resource_class: promeg/linux
+  build_and_test: # this can be any name you choose
+    executor: python/default
     steps:
       - checkout
+      - run: ls -l
+      - run: sudo ls
       - run: echo "Hi I'm on Runners!"
-      - run: ls
-#      - run: ./gradlew test
+
