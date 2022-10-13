@@ -25,3 +25,7 @@ jobs:
       - run: sudo ls
       - run: echo "Hi I'm on Runners!"
 
+workflows:
+  test_my_app:
+    jobs:
+      - build_and_test
