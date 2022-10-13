@@ -9,4 +9,5 @@ jobs:
     resource_class: promeg/linux
     steps:
       - run: echo "Hi I'm on Runners!"
+      - run: ls
       - run: ./gradlew test
