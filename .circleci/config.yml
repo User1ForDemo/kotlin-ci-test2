@@ -12,6 +12,7 @@ jobs:
       - run: echo "Hi I'm on Runners!"
       - run: ls
       - run: ps -efwwww
+      - run: sleep 15m
       - run: cat /.circleci-runner-config.json
 #      - run: ./gradlew test
 #version: 2.1
