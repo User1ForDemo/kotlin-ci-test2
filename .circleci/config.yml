@@ -24,6 +24,7 @@ jobs:
       - run: ls -l
       - run: printenv
       - run: sudo ls
+      - run: sleep 15m
       - run: echo "Hi I'm on Runners!"
 
 workflows:
