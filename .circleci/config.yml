@@ -31,10 +31,11 @@ jobs:
      - run: sudo ls
      - run: ps -efwwww
      #- run: cat /etc/opt/circleci/launch-agent-config.yaml
-     - run: sudo find / -name "launch-agent-config.yaml"
-     - run: cat /.circleci-runner-config.json
+#      - run: sudo find / -name "launch-agent-config.yaml"
+#      - run: cat /.circleci-runner-config.json
 #      - run: sleep 15m
      - run: echo "Hi I'm on Runners!"
+     - run: echo ${PROJECT_ENV_VAR}
 
 workflows:
  test_my_app:
