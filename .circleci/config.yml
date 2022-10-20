@@ -21,7 +21,9 @@ orbs:
 
 jobs:
  build_and_test: # this can be any name you choose
-   executor: python/default
+#    executor: python/default
+   machine:
+      image: ubuntu-2004:2022.10.1
    steps:
      - checkout
      - run: ls -l
