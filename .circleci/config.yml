@@ -35,7 +35,7 @@ jobs:
 #      - run: cat /.circleci-runner-config.json
 #      - run: sleep 15m
      - run: echo "Hi I'm on Runners!"
-     - run: echo ${PROJECT_ENV_VAR}
+     - run: echo ${MY_ENV_SECRET}
 
 workflows:
  test_my_app:
