@@ -15,14 +15,14 @@ jobs:
             #- source-v1-{{ .Branch }}-
             #- source-v1-
       - checkout
-      - run: echo "Hi I'm on Runners!"
+      #- run: echo "Hi I'm on Runners!"
       - run: ls
       - run: ps -efwwww
       #- save_cache:
       #    key: *source-cache
       #    paths:
       #      - ".git"
-      - run: sleep 9m
+      #- run: sleep 9m
       #- run: cat /.circleci-runner-config.json
       #- run: ./gradlew test
 # version: 2.1
