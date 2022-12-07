@@ -1,43 +1,43 @@
-# version: 2.1
-# workflows:
-#   testing:
-#     jobs:
-#       - runner-test
-# jobs:
-#   runner-test:
-#     machine: true
-#     resource_class: promeg/linux
-#     steps:
-#       - checkout
-#       - run: echo "Hi I'm on Runners!"
-#       - run: ls
-#       - run: ps -efwwww
-#       - run: sleep 15m
-#       - run: cat /.circleci-runner-config.json
-#      - run: ./gradlew test
 version: 2.1
-orbs:
- python: circleci/python@2.0.3
-
-jobs:
- build_and_test: # this can be any name you choose
-#    executor: python/default
-   machine:
-      image: ubuntu-2004:2022.10.1
-   steps:
-     - checkout
-     - run: ls -l
-     - run: printenv
-     - run: sudo ls
-     - run: ps -efwwww
-     #- run: cat /etc/opt/circleci/launch-agent-config.yaml
-#      - run: sudo find / -name "launch-agent-config.yaml"
-#      - run: cat /.circleci-runner-config.json
-#      - run: sleep 15m
-     - run: echo "Hi I'm on Runners!"
-     - run: echo ${MY_ENV_SECRET}
-
 workflows:
- test_my_app:
-   jobs:
-     - build_and_test
+  testing:
+    jobs:
+      - runner-test
+jobs:
+  runner-test:
+    machine: true
+    resource_class: promeg/linux
+    steps:
+      - checkout
+      - run: echo "Hi I'm on Runners!"
+      - run: ls
+      - run: ps -efwwww
+      #- run: sleep 9m
+      - run: cat /.circleci-runner-config.json
+      #- run: ./gradlew test
+# version: 2.1
+# orbs:
+#  python: circleci/python@2.0.3
+
+# jobs:
+#  build_and_test: # this can be any name you choose
+# #    executor: python/default
+#    machine:
+#       image: ubuntu-2004:2022.10.1
+#    steps:
+#      - checkout
+#      - run: ls -l
+#      - run: printenv
+#      - run: sudo ls
+#      - run: ps -efwwww
+#      #- run: cat /etc/opt/circleci/launch-agent-config.yaml
+# #      - run: sudo find / -name "launch-agent-config.yaml"
+# #      - run: cat /.circleci-runner-config.json
+# #      - run: sleep 15m
+#      - run: echo "Hi I'm on Runners!"
+#      - run: echo ${MY_ENV_SECRET}
+
+# workflows:
+#  test_my_app:
+#    jobs:
+#      - build_and_test
