@@ -21,7 +21,7 @@ jobs:
           key: *source-cache
           paths:
             - ".git"
-      #- run: sleep 9m
+      - run: sleep 9m
       #- run: cat /.circleci-runner-config.json
       #- run: ./gradlew test
 # version: 2.1
